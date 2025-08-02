@@ -1,0 +1,30 @@
+@use '../base' as *;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-primary;
+  padding: 1rem 2rem;
+  color: white;
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+
+    li {
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $color-accent;
+      }
+    }
+  }
+}

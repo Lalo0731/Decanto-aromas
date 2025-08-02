@@ -1,0 +1,60 @@
+@use '../base' as *;
+@use "sass:color";
+
+.hero {
+  width: 100%;
+  height: 600px; // Ajusta la altura como prefieras
+  position: relative;
+
+  &__carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .carousel {
+      height: 100%;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    // background: rgba(0, 0, 0, 0.3); // opcional: fondo semitransparente
+    padding: 1rem;
+    border-radius: 10px;
+    text-shadow: $shadow-text-7;
+
+    h1 {
+      font-size: 3rem; // antes 2.5rem
+      font-weight: 700; // más grueso
+      color: white;
+      letter-spacing: 2px;
+      text-shadow: $shadow-text-6; // más legible sobre imagen
+      font-family: $font-secondary; // ejemplo de fuente elegante
+    }
+
+    p {
+      color: #f0f0f0;
+      font-size: 1.5rem;
+      text-shadow: shadow-text-5;
+      font-family: 'Lato', sans-serif; // ejemplo de fuente clara
+    }
+
+    button {
+      background-color: $color-accent;
+      color: white;
+      padding: 0.75rem 2rem;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background-color: color.adjust($color-accent, $lightness: -10%);
+      }
+    }
+  }
+}

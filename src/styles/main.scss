@@ -1,0 +1,30 @@
+// @use './base' as *;
+// @use './components/navbar' as *;
+// @use './components/hero' as *;
+// @use './components/products' as *;
+
+// body {
+//   margin: 0;
+//   font-family: 'Montserrat', sans-serif;
+//   // font-family: 'Poppins', sans-serif;
+//   background-color: $color-bg;
+// }
+
+@use './base' as *;
+@use './components/navbar' as *;
+@use './components/hero' as *;
+@use './components/products' as *;
+@use './components/banner' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: $font-primary;
+  background-color: $color-bg;
+  color: $color-text;
+}
