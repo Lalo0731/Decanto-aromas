@@ -3,7 +3,7 @@
 
 .hero {
   width: 100%;
-  height: 600px; // Ajusta la altura como prefieras
+  height: 600px;
   position: relative;
 
   &__carousel {
@@ -23,25 +23,24 @@
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
-    // background: rgba(0, 0, 0, 0.3); // opcional: fondo semitransparente
     padding: 1rem;
     border-radius: 10px;
     text-shadow: $shadow-text-7;
 
     h1 {
-      font-size: 3rem; // antes 2.5rem
-      font-weight: 700; // más grueso
+      font-size: 3rem; 
+      font-weight: 700; 
       color: white;
       letter-spacing: 2px;
-      text-shadow: $shadow-text-6; // más legible sobre imagen
-      font-family: $font-secondary; // ejemplo de fuente elegante
+      text-shadow: $shadow-text-6; 
+      font-family: $font-secondary; 
     }
 
     p {
       color: #f0f0f0;
       font-size: 1.5rem;
       text-shadow: shadow-text-5;
-      font-family: 'Lato', sans-serif; // ejemplo de fuente clara
+      font-family: 'Lato', sans-serif; 
     }
 
     button {

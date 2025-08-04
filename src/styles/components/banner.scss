@@ -1,4 +1,7 @@
-.perfumes-banner {
+@use '../base' as *;
+
+.banner {
+  &__arabe{
     position: relative;
     margin: 2rem auto;
     cursor: pointer;
@@ -8,38 +11,42 @@
     border-radius: 12px;
     transition: transform 0.3s ease;
 
-
     img {
       width: 100%;
       height: auto;
       display: block;
       transition: transform 0.4s ease;
     }
-  
-    .overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.4);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 2rem;
-      font-weight: bold;
-      opacity: 0;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-      transition: opacity 0.3s ease;
-    }
-  
+
     &:hover img {
       transform: scale(1.1);
     }
-  
-    &:hover .overlay {
+
+    &:hover .banner__overlay {
       opacity: 1;
     }
   }
   
+  &__overlay{
+    position: absolute;    
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+    transition: opacity 0.3s ease;
+    
+    h2{
+      font-family: $font-title;
+      font-size: 2rem;
+    }
+  }
+}

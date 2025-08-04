@@ -11,12 +11,18 @@ const Banner = () => {
   };
 
   return (
-    <div className="perfumes-banner" onClick={goToPerfumesArabes}>
+    <div className="banner__arabe" onClick={goToPerfumesArabes}>
       <img src={imageBanner} alt="Perfumes Árabes" />
-      <div className="overlay">
+      <div className="banner__overlay">
         <h2>Descubra nuestra gama de perfumes árabes</h2>
       </div>
     </div>
+    // <div className="perfumes-banner" onClick={goToPerfumesArabes}>
+    //   <img src={imageBanner} alt="Perfumes Árabes" />
+    //   <div className="overlay">
+    //     <h2>Descubra nuestra gama de perfumes árabes</h2>
+    //   </div>
+    // </div>
   );
 };
 
