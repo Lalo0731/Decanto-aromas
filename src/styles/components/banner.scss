@@ -1,52 +1,117 @@
 @use '../base' as *;
 
 .banner {
-  &__arabe{
+  &__wrapper{
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  &__text{
+    font-size: 2rem;
+    font-weight: $font-bold;
+    color: $color-primary;
+    margin-bottom: 1.5rem;
+  }
+  &__container {
     position: relative;
-    margin: 2rem auto;
-    cursor: pointer;
     width: 100%;
     height: 500px;
+    display: flex;
+  }
+
+  &__half {
+    position: relative;
+    width: 50%;
+    height: 100%;
     overflow: hidden;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
+    cursor: pointer;
 
     img {
       width: 100%;
-      height: auto;
-      display: block;
+      height: 100%;
+      object-fit: cover;
       transition: transform 0.4s ease;
     }
 
     &:hover img {
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
 
-    &:hover .banner__overlay {
-      opacity: 1;
-    }
-  }
-  
-  &__overlay{
-    position: absolute;    
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 2rem;
-    font-weight: bold;
-    opacity: 0;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
-    transition: opacity 0.3s ease;
-    
-    h2{
+    .banner__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $color-blanco;
       font-family: $font-title;
       font-size: 2rem;
     }
   }
+
+  &__half--arabe {
+    clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
+  }
+
+  &__half--designer {
+    clip-path: polygon(8% 0, 100% 0, 100% 100%, 0 100%);
+  }
 }
+
+
+
+// @use '../base' as *;
+
+// .banner {
+//   &__arabe{
+//     position: relative;
+//     margin: 2rem auto;
+//     cursor: pointer;
+//     width: 100%;
+//     height: 500px;
+//     overflow: hidden;
+//     border-radius: 12px;
+//     transition: transform 0.3s ease;
+
+//     img {
+//       width: 100%;
+//       height: auto;
+//       display: block;
+//       transition: transform 0.4s ease;
+//     }
+
+//     &:hover img {
+//       transform: scale(1.1);
+//     }
+
+//     &:hover .banner__overlay {
+//       opacity: 1;
+//     }
+//   }
+  
+//   &__overlay{
+//     position: absolute;    
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     background: rgba(0,0,0,0.4);
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     color: white;
+//     font-size: 2rem;
+//     font-weight: bold;
+//     opacity: 0;
+//     text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+//     transition: opacity 0.3s ease;
+    
+//     h2{
+//       font-family: $font-title;
+//       font-size: 2rem;
+//     }
+//   }
+// }

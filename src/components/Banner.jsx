@@ -1,28 +1,30 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import imageBanner from '../images/perfumes_arabes.webp';
+import { Link } from 'react-router-dom';
+import arabe from '../images/per-arabes.jpg';
+import disenador from '../images/per-disenador.webp';
 import '../styles/components/banner.scss';
 
 const Banner = () => {
-  const navigate = useNavigate();
-
-  const goToPerfumesArabes = () => {
-    navigate('/perfumes-arabes');
-  };
 
   return (
-    <div className="banner__arabe" onClick={goToPerfumesArabes}>
-      <img src={imageBanner} alt="Perfumes Árabes" />
-      <div className="banner__overlay">
-        <h2>Descubra nuestra gama de perfumes árabes</h2>
+    <div className="banner__wrapper">
+      <h2 className="banner__text">COLECCIONES ÚNICAS</h2>
+      <div className="banner__container">
+        <Link to={"/perfumes-arabes"} className="banner__half banner__half--arabe">
+          <img src={arabe} alt="Perfumes Árabes" />
+          <div className="banner__overlay">
+            <h3>perfumes Árabes</h3>
+          </div>
+        </Link>
+
+        <Link to={"/perfumes-disenador"} className="banner__half banner__half--designer">
+          <img src={disenador} alt="Perfumes de Diseñador" />
+          <div className="banner__overlay">
+            <h3>perfumes de Diseñador</h3>
+          </div>
+        </Link>
       </div>
     </div>
-    // <div className="perfumes-banner" onClick={goToPerfumesArabes}>
-    //   <img src={imageBanner} alt="Perfumes Árabes" />
-    //   <div className="overlay">
-    //     <h2>Descubra nuestra gama de perfumes árabes</h2>
-    //   </div>
-    // </div>
   );
 };
 

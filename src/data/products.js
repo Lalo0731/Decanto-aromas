@@ -14,40 +14,96 @@ import perfume4 from '../images/perfume4.webp';
 import perfumDetail4_1 from '../images/perfumDetail4_1.avif';
 import perfumDetail4_2 from '../images/perfumDetail4_2.jpg';
 
+import arabe1 from '../images/OudRoyal.webp';
+import arabe2 from '../images/AmberOudGold.jpg';
+import arabe3 from '../images/MuskAlTahara.avif';
 
-const products = [
-    {
-      id: '1',
-      name: 'Perfume Dubai Citrine Unisex de Bond No 9 EDP 100ML',
-      price: 950,
-      description: 'Una fragancia intensa con notas cítricas y ambarinas.',
-      priceBefore: 'antes: 6,800',
-      priceNow: 'ahora: 5,500',
-      images: [perfume1, perfumDetail1, perfumDetail1_1, perfume1]
-    },
-    {
-      id: '2',
-      name: 'Perfume Dos',
-      price: 1200,
-      description: 'Notas amaderadas profundas para una personalidad fuerte.',
-      images: [perfume2, perfumDetail2_1, perfumDetail2_2, perfume2]
+import disenador1 from '../images/JeanPaul.webp';
 
-    },
-    {
-      id: '3',
-      name: 'Perfume Tres',
-      price: 1050,
-      description: 'Aromas frescos y florales que inspiran libertad.',
-      images: [perfume3, perfumDetail3_1, perfumDetail3_2, perfume3]
-    },
-    {
-      id: '4',
-      name: 'Perfume Cuatro',
-      price: 1100,
-      description: 'Combina lo dulce y lo exótico con elegancia.',
-      images: [perfume4, perfumDetail4_1, perfumDetail4_2, perfume4]
-    }
-  ];
-  
-  export default products;
-  
+
+const perfumes = [
+  {
+    id: '1',
+    name: 'Perfume Dubai Citrine Unisex de Bond No 9 EDP 100ML',
+    description: 'Una fragancia intensa con notas cítricas y ambarinas.',
+    category: 'arabe', // o 'diseñador'
+    oldPrice: 6800,
+    price: 5500,
+    isNew: true,
+    images: [perfume1, perfumDetail1, perfumDetail1_1]
+  },
+  {
+    id: '2',
+    name: 'Perfume Dos',
+    description: 'Notas amaderadas profundas para una personalidad fuerte.',
+    category: 'diseñador',
+    oldPrice: 1500,
+    price: 1200,
+    isNew: true,
+    // isNew: false,
+    images: [perfume2, perfumDetail2_1, perfumDetail2_2]
+  },
+  {
+    id: '3',
+    name: 'Perfume Tres',
+    description: 'Aromas frescos y florales que inspiran libertad.',
+    category: 'arabe',
+    oldPrice: 1300,
+    price: 1050,
+    isNew: true,
+    images: [perfume3, perfumDetail3_1, perfumDetail3_2]
+  },
+  {
+    id: '4',
+    name: 'Perfume Cuatro',
+    description: 'Combina lo dulce y lo exótico con elegancia.',
+    category: 'diseñador',
+    oldPrice: 1400,
+    price: 1100,
+    isNew: true,
+    images: [perfume4, perfumDetail4_1, perfumDetail4_2]
+  },
+  {
+    id: '5',
+    name: 'Oud Royal',
+    description: 'Una fragancia intensa con toques de madera y especias.',
+    category: 'arabe',
+    oldPrice: 450,
+    price: 350,
+    isNew: false,
+    image: [arabe1]
+  },
+  {
+    id: '6',
+    name: 'Musk Al Tahara',
+    description: 'Aroma limpio y elegante para uso diario.',
+    category: 'arabe',
+    oldPrice: 350,
+    price: 280,
+    isNew: false,
+    image: [arabe3]
+  },
+  {
+    id: '7',
+    name: 'Amber Oud Gold',
+    description: 'Dulce y amaderado, ideal para ocasiones especiales.',
+    category: 'arabe',
+    oldPrice: 500,
+    price: 400,
+    isNew: false,
+    image: [arabe2]
+  },
+  {
+    id: '7',
+    name: 'Jean Paul Gaultier Le Male Elixir Parfum',
+    description: 'Dulce y amaderado, ideal para ocasiones especiales.',
+    category: 'diseñador',
+    oldPrice: 4000,
+    price: 3300,
+    isNew: false,
+    image: [disenador1]
+  }
+];
+
+export default perfumes;
+
