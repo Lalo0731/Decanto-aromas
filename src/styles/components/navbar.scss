@@ -1,30 +1,67 @@
 @use '../base' as *;
 
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: $color-primary;
   padding: 1rem 2rem;
-  color: white;
+  color: $color-blanco;
 
   &__logo {
     font-size: 1.5rem;
     font-weight: bold;
+    text-decoration: none;
+    color: $color-blanco;
   }
 
   &__links {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     list-style: none;
 
     li {
       cursor: pointer;
       transition: color 0.3s;
 
-      &:hover {
-        color: $color-accent;
+        a, span{
+          color: $color-blanco;
+          text-decoration: none;
+          transition: color 0.3s;
+
+        &:hover {
+          color: $color-accent;
+        }
+      }
+      button{
+        background: none;
+        border: none;
+        color: $color-blanco;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: color 0.3s;
+        font-family: $font-primary;
+  
+        &:hover {
+          color: $color-accent;
+        }
       }
     }
   }
+  &__submenu{
+    list-style: none;
+    margin-top: 0.2rem;
+    li{
+      padding: 0.2rem;
+    }
+  }
+}
+
+.navbar.scrolled {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.9);
+  transition: box-shadow 0.3s ease-in-out;
 }

@@ -17,8 +17,10 @@ const Footer = () => {
           <h4>Enlaces</h4>
           <ul>
             <li><a href="/">Inicio</a></li>
+            <li><a href="/perfumes-disenador">Perfumes de Diseñador</a></li>
             <li><a href="/perfumes-arabes">Perfumes Árabes</a></li>
             <li><a href="/decants-disenador">Decants de Diseñador</a></li>
+            <li><a href="/decants-arabes">Decants Árabes</a></li>
             <li><a href="/contacto">Contacto</a></li>
           </ul>
         </div>

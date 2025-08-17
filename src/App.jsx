@@ -7,18 +7,26 @@ import PerfumesArabes from './views/PerfumesArabes';
 import PerfumesDisenador from './views/PerfumesDisenador';
 import DecantsArabe from './views/DecantsArabe';
 import DecantsDisenador from './views/DecantsDisenador';
+import PerfumesProximos from './views/PerfumesProximos.jsx';
+import MainLayout from './layouts/MainLayout.jsx';
 
 export default function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/product/:id" element={<ProductDetail />} />
-        <Route path="/perfumes-arabes" element={<PerfumesArabes />} />
-        <Route path="/perfumes-disenador" element={<PerfumesDisenador />} />
-        <Route path="/decants-disenador" element={<DecantsDisenador />} />
-        <Route path="/decants-arabe" element={<DecantsArabe />} />
-      </Routes>
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/perfumes-arabes" element={<PerfumesArabes />} />
+          <Route path="/perfumes-disenador" element={<PerfumesDisenador />} />
+          <Route path="/decants-disenador" element={<DecantsDisenador />} />
+          <Route path="/decants-arabes" element={<DecantsArabe />} />
+          <Route path="/proximamente" element={<PerfumesProximos />} />
+        </Routes>
+      </MainLayout>
     </Router>
   );
 }
+
+
+

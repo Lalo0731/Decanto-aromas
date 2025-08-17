@@ -20,6 +20,14 @@ import arabe3 from '../images/MuskAlTahara.avif';
 
 import disenador1 from '../images/JeanPaul.webp';
 
+import proximo1 from '../images/perfumNew1.webp';
+import proximo2 from '../images/perfumNew2.jpg';
+import proximo3 from '../images/perfumNew3.webp';
+import proximo4 from '../images/perfumNew4.jpg';
+import proximo5 from '../images/perfumNew5.jpeg';
+import proximo6 from '../images/perfumNew6.webp';
+import proximo7 from '../images/perfumNew7.jpg';
+
 
 const perfumes = [
   {
@@ -71,7 +79,7 @@ const perfumes = [
     oldPrice: 450,
     price: 350,
     isNew: false,
-    image: [arabe1]
+    images: [arabe1]
   },
   {
     id: '6',
@@ -81,7 +89,7 @@ const perfumes = [
     oldPrice: 350,
     price: 280,
     isNew: false,
-    image: [arabe3]
+    images: [arabe3]
   },
   {
     id: '7',
@@ -91,17 +99,88 @@ const perfumes = [
     oldPrice: 500,
     price: 400,
     isNew: false,
-    image: [arabe2]
+    images: [arabe2]
   },
   {
-    id: '7',
+    id: '8',
     name: 'Jean Paul Gaultier Le Male Elixir Parfum',
     description: 'Dulce y amaderado, ideal para ocasiones especiales.',
     category: 'diseñador',
     oldPrice: 4000,
     price: 3300,
     isNew: false,
-    image: [disenador1]
+    images: [disenador1]
+  },
+  {
+    id: '9',
+    name: 'Sauvage - Christian Dior - 100ml EDP',
+    description: 'Eau de parfum - notas cítricas y avainilladas - recargable.',
+    category: 'next',
+    oldPrice: 7000,
+    price: 6000,
+    isNew: false,
+    images: [proximo1,proximo2,proximo3]
+  },
+  {
+    id: '10',
+    name: 'Bleu - Chanel - 100ml EDT',
+    description: 'Bleu de Chanel de Chanel es una fragancia de la familia olfativa Amaderada Aromática, lanzada en 2010.',
+    category: 'next',
+    oldPrice: 6000,
+    price: 4500,
+    isNew: false,
+    images: [proximo4,proximo5,proximo3]
+  },
+  {
+    id: '11',
+    name: 'Bleu - Chanel - 100ml EDT',
+    description: 'Bleu de Chanel de Chanel es una fragancia de la familia olfativa Amaderada Aromática, lanzada en 2010.',
+    category: 'next',
+    oldPrice: 6000,
+    price: 4500,
+    isNew: false,
+    images: [proximo4,proximo5,proximo3]
+  },
+  {
+    id: '12',
+    name: 'Acqua di Gio Parfum',
+    description: 'El secreto de los mejores perfumes es la combinación perfecta entre ingredientes que se potencian entre sí y hacen que sea posible trasladarnos a lugares únicos.',
+    category: 'next',
+    oldPrice: 6000,
+    price: 4500,
+    isNew: false,
+    images: [proximo5,proximo6]
+  },
+  {
+    id: '13',
+    name: 'Acqua di Gio Parfum',
+    description: 'El secreto de los mejores perfumes es la combinación perfecta entre ingredientes que se potencian entre sí y hacen que sea posible trasladarnos a lugares únicos.',
+    category: 'next',
+    oldPrice: 6000,
+    price: 4500,
+    isNew: false,
+    images: [proximo5,proximo6]
+  }
+  ,
+  {
+    id: '14',
+    name: 'Acqua di Gio Parfum',
+    description: 'El secreto de los mejores perfumes es la combinación perfecta entre ingredientes que se potencian entre sí y hacen que sea posible trasladarnos a lugares únicos.',
+    category: 'next',
+    oldPrice: 6000,
+    price: 4500,
+    isNew: false,
+    images: [proximo5,proximo6]
+  },
+  {
+    id: '15',
+    name: 'Acqua di Gio Parfum',
+    description: 'El secreto de los mejores perfumes es la combinación perfecta entre ingredientes que se potencian entre sí y hacen que sea posible trasladarnos a lugares únicos.',
+    category: 'next',
+    oldPrice: 6000,
+    price: 4500,
+    isNew: false,
+    images: [proximo5,proximo6]
   }
 ];
 

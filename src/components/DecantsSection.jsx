@@ -23,7 +23,7 @@ function DecantsSection() {
                     <img src={arabes} alt="Decants árabes"/>
                     <div className="decants__content">
                         <h2>Decants Árabes</h2>
-                        <Link to="/decants-arabe" className="btn">
+                        <Link to="/decants-arabes" className="btn">
                             Ver más
                         </Link>
                     </div>
