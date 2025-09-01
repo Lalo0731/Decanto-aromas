@@ -30,9 +30,58 @@ const ProductDetail = () => {
 
       <div className="product-detail__info">
         <h1>{product.name}</h1>
-        <p className="price">${product.price}</p>
+        <span className={`status ${product.available ? "available" : "unavailable"}`}>
+          {product.available ? "Disponible" : "Agotado" }
+        </span>
+
+        {!product.isDecantOnly && (
+          <div className="price-container">
+            <p className="price old">Antes ${product.oldPrice}</p>
+            <p className="price new"><span>Ahora</span> ${product.price}</p>
+          </div>
+        )}
+
+        {product.isDecantOnly && (
+          <div className="product-detail__decant-only">
+            <p className="product-detail__decant-price">
+              Precio por mililitro: <strong>${product.priceDecant}</strong>
+            </p>
+            <p className="product-detail__decant-note">
+              *La venta de decants es a partir de 5ml.
+            </p>
+          </div>
+        )}
+
         <p className="description">{product.description}</p>
-        {/* <button className="btn-buy">Comprar ahora</button> */}
+
+        {product.accords && (
+          <div className="accords">
+            <h3>Acordes principales:</h3>
+            <div className="tags">
+              {product.accords.map((acc, index) => (
+                <span key={index} className="tag">{acc}</span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {product.isDecant && !product.isDecantOnly && (
+          <div className="product-detail__decant">
+            <p className="product-detail__decant-price">Precio por mililitro: <strong>${product.priceDecant}</strong></p>
+            <p className="product-detail__decant-note">*La venta de decants es a partir de 5ml.</p>
+          </div>
+        )}
+
+        {product.specialFor && (
+          <div className="special-for">
+            <h3>Especial para:</h3>
+            <div className="tags">
+              {product.specialFor.map((s, index) => (
+                <span key={index} className="tag">{s}</span>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

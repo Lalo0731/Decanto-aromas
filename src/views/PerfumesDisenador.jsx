@@ -2,7 +2,8 @@ import React from "react";
 import PerfumesGrid from "../components/PerfumesGrid";
 
 const PerfumesDisenador = () => {
-  return <PerfumesGrid title="Perfumes de Diseñador" filterFn={(p) => p.category === 'diseñador'} />;
+  // return <PerfumesGrid title="Perfumes de Diseñador" filterFn={(p) => p.category === 'diseñador' && !p.isDecant && !p.isDecantOnly} />;
+  return <PerfumesGrid title="Perfumes de Diseñador" filterFn={(p) => p.category === 'diseñador' && !p.isDecantOnly} />;
 }
 
 export default PerfumesDisenador;

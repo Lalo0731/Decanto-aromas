@@ -1,3 +1,5 @@
+@use './base' as *;
+
 .product-detail {
     display: flex;
     gap: 2rem;
@@ -47,12 +49,27 @@
         font-size: 2rem;
         margin-bottom: 1rem;
       }
+
+      .price-container{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
   
       .price {
         font-size: 1.5rem;
         font-weight: bold;
-        color: #333;
-        margin-bottom: 1rem;
+
+        &.old{
+          color: $color-rojo;
+          text-decoration: line-through;
+        }
+
+        &.new{
+          color:$color-dorado;
+          font-weight: $font-bold;
+        }
       }
   
       .description {
@@ -76,6 +93,90 @@
           background-color: #444;
         }
       }
+
+
+    .status {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: green;
+
+      &.unavailable {
+        color: red;
+      }
+    }
+
+    .accords, .special-for {
+      margin-top: 1.5rem;
+
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+
+        .tag {
+          background: #f0f0f0;
+          border-radius: 20px;
+          padding: 0.4rem 1rem;
+          font-size: 0.9rem;
+          color: #444;
+        }
+      }
     }
   }
+  &__decant {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  
+    margin: 1rem 0;
+    padding: 1rem;
+    background: $beige-grisaceo;
+    border: 1px dashed $color-dorado;
+    border-radius: 8px;
+
+    &-price {
+      font-size: 1.2rem;
+      font-weight: $font-bold;
+      color: $cobre;
+      // -webkit-text-stroke: 0.5px #000;
+    }
+
+    &-note {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 0.3rem;
+      font-weight: $font-bold;
+    }
+  }
+  &__decant-only {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 2px solid $color-dorado;
+    border-radius: 10px;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  
+  &__decant-price {
+    font-size: 1.4rem;
+    font-weight: $font-bold;
+    color: darken($color-dorado, 10%);
+  }
+  
+  &__decant-note {
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #555;
+    opacity: 0.8;
+  }
+}
   

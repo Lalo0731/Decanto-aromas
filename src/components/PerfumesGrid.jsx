@@ -31,10 +31,31 @@ function PerfumesGrid({ title, filterFn }) {
                 )}
               </div>
               <h3>{product.name}</h3>
-              <p className="price">
-                <span className="before">Antes ${product.oldPrice}</span>
-                <span className="now">Ahora ${product.price}</span>
-              </p>
+
+              {product.price && !product.isDecantOnly && (
+                <p className="price">
+                  {product.oldPrice && (
+                    <span className="before">Antes ${product.oldPrice}</span>
+                  )}
+                  <span className="now">Ahora ${product.price}</span>
+                </p>
+              )}
+
+              {product.isDecant && !product.isDecantOnly && (
+                <span className="products__decants">
+                  Disponible en Decants
+                </span>
+              )}
+
+              {product.isDecantOnly && (
+                <div className="products__decants-only">
+                  <p className="price">
+                    Precio por ML: $<strong>{product.priceDecant}</strong>
+                  </p>
+                  <p className="note">*Disponible solo en decants</p>
+                </div>
+              )}
+
             </div>
           );
         })}
