@@ -39,7 +39,7 @@ const perfumes = [
     category: 'arabe', // o 'diseñador'
     oldPrice: 6800,
     price: 5500,
-    isDecantOnly: true,
+    isDecantOnly: true, //cuando quieras que un producto sea solo decants, 👈 esto marca que NO hay perfume completo
     priceDecant: 15,
     isDecant: true,
     isNew: true,
@@ -53,7 +53,7 @@ const perfumes = [
   },
   {
     id: '2',
-    name: 'NauticaNautica Voyage de Nautica es una fragancia de la familia olfativa Amaderada Acuática para Hombres.',
+    name: 'NauticaNautica Voyage de Nautica.',
     description: 'Fragancia masculina que evoca la frescura del océano y la libertad de la navegación.',
     category: 'diseñador',
     oldPrice: 1500,

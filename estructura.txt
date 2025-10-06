@@ -1,0 +1,62 @@
+decanto-aromas/
+|── node_modules
+|── public/
+│ 
+|── src/
+|       |── assets
+|       |── components/
+|       |         └── Banne.jsx
+|       |         └── Carousel.jsx
+|       |         └── CommingSoonBanner.jsx
+|       |         └── DecantsSection.jsx
+|       |         └── Footer.jsx
+|       |         └── Hero.jsx
+|       |         └── Navbar.jsx
+|       |         └── PerfumesGrid.jsx
+|       |         └── ProductList.jsx
+|       |         └── SocialMediaStrip.jsx
+|       |── data/
+|       |     └── products.js
+|       |── images
+|       |       └──banner1.webp
+|       |       └──banner2.webp
+|       |       └──banner3.webp
+|       |       └──perfume1.webp
+|       |       └──perfume2.webp
+|       |       └──perfume3.webp
+|       |       └──perfume4.webp
+|       |       └──perfumeDesc1.webp
+|       |       └──perfumeDesc2.webp
+|       |── pages
+|       |── styles/
+|       |    |   └── base/
+|       |    |        └── _index.scss
+|       |    |        └── _variables.scss
+|       |    |──── components/
+|       |    |      └── banner.scss
+|       |    |      └── carousel.scss
+|       |    |      └── comingSoonBanner.scss
+|       |    |      └── decantsSection.scss
+|       |    |      └── footer.scss
+|       |    |      └── hero.scss
+|       |    |      └── navbar.scss
+|       |    |      └── product.scss
+|       |    |      └── socialMediaStrip.scss
+│       |    |── decantsArabe.scss
+│       |    |── login.scss
+│       |    |── main.scss
+│       |    |── productDetail.scss
+│       |── views/
+│       |       └── DecantsArabe.jsx
+│       |       └── DecantsDisenador.jsx
+│       |       └── Home.jsx
+│       |       └── PerfumesArabes.jsx
+│       |       └── PerfumesDisenador.jsx
+│       |       └── PerfumesProximos.jsx
+│       |       └── ProductDetail.jsx
+|       |── App.jsx
+|       |── index.jsx
+|.gitignore
+|──index.html
+|── package-lock.json
+|── package.json
