@@ -14,8 +14,11 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 280px));
     gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .product-card {
