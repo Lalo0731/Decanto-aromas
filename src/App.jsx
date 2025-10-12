@@ -7,7 +7,7 @@ import PerfumesArabes from './views/PerfumesArabes';
 import PerfumesDisenador from './views/PerfumesDisenador';
 import DecantsArabe from './views/DecantsArabe';
 import DecantsDisenador from './views/DecantsDisenador';
-import PerfumesProximos from './views/PerfumesProximos.jsx';
+import DecantsNicho from './views/DecantsNicho.jsx';
 import MainLayout from './layouts/MainLayout.jsx';
 
 export default function App() {
@@ -21,7 +21,7 @@ export default function App() {
           <Route path="/perfumes-disenador" element={<PerfumesDisenador />} />
           <Route path="/decants-disenador" element={<DecantsDisenador />} />
           <Route path="/decants-arabes" element={<DecantsArabe />} />
-          <Route path="/proximamente" element={<PerfumesProximos />} />
+          <Route path="/decants-nicho" element={<DecantsNicho />} />
         </Routes>
       </MainLayout>
     </Router>

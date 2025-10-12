@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '../styles/components/navbar.scss';
 
 function Navbar() {
-  const [openDropdown, setOpenDropdown] = useState(null); 
+  const [openDropdown, setOpenDropdown] = useState(null);
   const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
@@ -36,7 +36,7 @@ function Navbar() {
       <Link to="/" className="navbar__logo">Decanto Aromas</Link>
       <ul className="navbar__links">
         <li><Link to="/">Inicio</Link></li>
-        <li 
+        <li
           className="navbar__dropdown"
           onMouseEnter={() => setOpenDropdown("perfumes")}
           onMouseLeave={() => setOpenDropdown(null)}
@@ -49,7 +49,7 @@ function Navbar() {
             </ul>
           )}
         </li>
-        <li 
+        <li
           className="navbar__dropdown"
           onMouseEnter={() => setOpenDropdown("decants")}
           onMouseLeave={() => setOpenDropdown(null)}
@@ -59,10 +59,11 @@ function Navbar() {
             <ul className="navbar__submenu">
               <li><Link to="/decants-disenador">Diseñador</Link></li>
               <li><Link to="/decants-arabes">Árabe</Link></li>
+              <li><Link to="/decants-nicho">Nicho</Link></li>
             </ul>
           )}
         </li>
-        <li><Link to="/proximamente">Próximamente</Link></li>
+        {/* <li><Link to="/decants-nicho">Próximamente</Link></li> */}
         <li>
           <button
             className="navbar__link navbar__button"

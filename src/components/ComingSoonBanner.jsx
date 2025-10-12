@@ -4,11 +4,11 @@ import imageComingSoon from '../images/proximamente.png';
 
 function ComingSoonBanner() {
     return(
-        <Link to="/proximamente" className="banner__coming">
+        <Link to="/decants-nicho" className="banner__coming">
             <img src={imageComingSoon} alt="Productos próximamente" />
             <div className="banner__soon">
-                <h2 className="banner__title">Próximamente</h2>
-                <p className="banner__subtitle">Conoce los perfumes que muy pronto serán tuyos</p>
+                <h2 className="banner__title">Perfumes Nicho</h2>
+                <p className="banner__subtitle">Conoce los perfumes tan único como el secreto que guardas</p>
             </div>
       </Link>
     );
