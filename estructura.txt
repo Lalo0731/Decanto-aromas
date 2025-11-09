@@ -3,7 +3,7 @@ decanto-aromas/
 |── public/
 │ 
 |── src/
-|       |── assets
+|       |── assets/
 |       |── components/
 |       |         └── Banne.jsx
 |       |         └── Carousel.jsx
@@ -17,7 +17,7 @@ decanto-aromas/
 |       |         └── SocialMediaStrip.jsx
 |       |── data/
 |       |     └── products.js
-|       |── images
+|       |── images/
 |       |       └──banner1.webp
 |       |       └──banner2.webp
 |       |       └──banner3.webp
@@ -27,7 +27,7 @@ decanto-aromas/
 |       |       └──perfume4.webp
 |       |       └──perfumeDesc1.webp
 |       |       └──perfumeDesc2.webp
-|       |── pages
+|       |── pages/
 |       |── styles/
 |       |    |   └── base/
 |       |    |        └── _index.scss
@@ -46,6 +46,8 @@ decanto-aromas/
 │       |    |── login.scss
 │       |    |── main.scss
 │       |    |── productDetail.scss
+│       |── utils/
+│       |       └── alerts.ts
 │       |── views/
 │       |       └── DecantsArabe.jsx
 │       |       └── DecantsDisenador.jsx

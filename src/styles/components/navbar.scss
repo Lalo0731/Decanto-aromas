@@ -9,14 +9,28 @@
   justify-content: space-between;
   align-items: center;
   background-color: $color-primary;
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   color: $color-blanco;
 
   &__logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    // font-size: 1.5rem;
+    // font-weight: bold;
+    // text-decoration: none;
+    // color: $color-blanco;
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    color: $color-blanco;
+
+    &-img {
+      height: 106px; /* tamaño más notorio */
+      width: auto;
+      transition: transform 0.3s ease;
+      object-fit: contain;
+  
+      &:hover {
+        transform: scale(1.15);
+      }
+    }
   }
 
   &__links {
@@ -65,3 +79,72 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.9);
   transition: box-shadow 0.3s ease-in-out;
 }
+
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 1100;
+
+  span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: $color-blanco;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+
+  &.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  &.open span:nth-child(2) {
+    opacity: 0;
+  }
+  &.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  .navbar__links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: $color-primary;
+    flex-direction: column;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    text-align: center;
+
+    &.open {
+      max-height: 500px; // ajusta según cantidad de links
+    }
+
+    li {
+      margin: 1rem 0;
+    }
+  }
+
+  .navbar__dropdown:hover .navbar__submenu {
+    display: none; // desactiva hover dropdown en mobile
+  }
+
+  .navbar__submenu {
+    position: static;
+    display: block;
+    background: none;
+    li {
+      padding: 0.5rem 1rem;
+    }
+  }
+  }
