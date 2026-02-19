@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import arabe from '../images/per-arabes.jpg';
-import disenador from '../images/per-disenador.webp';
+import disenador from '../images/per-disenador.jpg';
 import '../styles/components/banner.scss';
 
 const Banner = () => {

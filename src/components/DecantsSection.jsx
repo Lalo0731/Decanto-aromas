@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import disenador from '../images/disenador.webp';
+import disenador from '../images/disenador.jpg';
 import arabes from '../images/arabes.webp';
 import '../styles/components/decantsSection.scss';
 
