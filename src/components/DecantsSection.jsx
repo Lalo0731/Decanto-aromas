@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 import disenador from '../images/disenador.jpg';
-import arabes from '../images/arabes.webp';
+import arabes from '../images/arabes.jpg';
 import '../styles/components/decantsSection.scss';
 
 function DecantsSection() {
