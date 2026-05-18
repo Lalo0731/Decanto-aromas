@@ -114,6 +114,7 @@ function Navbar() {
                 Lo más nuevo
               </button>
             </li>
+            <li><Link to="/solicitar-perfume">¿No encuentras tu perfume?</Link></li>
           </>
         )}
       </ul>

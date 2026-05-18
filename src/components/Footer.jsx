@@ -28,13 +28,13 @@ const Footer = () => {
         <div className="footer__section">
           <h4>Síguenos</h4>
           <div className="footer__social">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="https://www.facebook.com/share/18cKMvvaTv/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FontAwesomeIcon icon={faFacebookF} />
             </a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href="https://www.instagram.com/decanto.aromas?igsh=NGpxMTNyeGdjcHBq" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <a href="https://www.tiktok.com/@decanto.aromas?_r=1&_t=ZS-95Eq1foCiV3" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
               <FontAwesomeIcon icon={faTiktok} />
             </a>
           </div>

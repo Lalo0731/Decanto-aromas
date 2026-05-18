@@ -12,7 +12,7 @@ function DecantsSection() {
                 <div className="decants__card">
                     <img src={disenador} alt="Decants de diseñador" />
                     <div className="decants__content">
-                        <h2>Decants de Diseñador</h2>
+                        <h2>Decants Diseñador</h2>
                         <Link to="/decants-disenador" className="btn">
                             Ver más
                         </Link>

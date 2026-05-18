@@ -4,7 +4,7 @@ import { getPerfumeById } from '../services/perfumesService';
 import { showWarning } from '../utils/alerts';
 import '../styles/productDetail.scss';
 
-const ProductDetail = () => {
+const ProductFullDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [selectedImage, setSelectedImage] = useState(null);
@@ -79,37 +79,10 @@ const ProductDetail = () => {
           {product.available ? 'Disponible' : 'Agotado'}
         </span>
 
-        {!product.isDecantOnly && (
           <div className="price-container">
             {product.oldPrice && <p className="price old">Antes ${product.oldPrice}</p>}
             <p className="price new"><span>Ahora</span> ${product.price}</p>
           </div>
-        )}
-
-        {product.isDecantOnly && (
-          <div className="product-detail__decant-only">
-            <p className="product-detail__decant-price">
-              Precio por mililitro: <strong>${product.priceDecant}</strong>
-            </p>
-            <p className="product-detail__decant-note">
-              *La venta de decants es a partir de 5ml.
-            </p>
-          </div>
-        )}
-
-        {(product.isDecant || product.isDecantOnly) && (
-          <div className="product-detail__decant">
-            <p>Ingrese la cantidad de Mililitros</p>
-            <input
-              type="number"
-              min="5"
-              value={ml}
-              onChange={(e) => setMl(e.target.value)}
-              placeholder="Ingresa los ml"
-              className="input-ml"
-            />
-          </div>
-        )}
 
         <p className="description">{product.description}</p>
 
@@ -132,17 +105,6 @@ const ProductDetail = () => {
           </div>
         )}
 
-        {product.isDecant && !product.isDecantOnly && (
-          <div className="product-detail__decant">
-            <p className="product-detail__decant-price">
-              Precio por mililitro: <strong>${product.priceDecant}</strong>
-            </p>
-            <p className="product-detail__decant-note">
-              *La venta de decants es a partir de 5ml.
-            </p>
-          </div>
-        )}
-
         {product.specialFor?.length > 0 && (
           <div className="special-for">
             <h3>Especial para:</h3>
@@ -158,4 +120,4 @@ const ProductDetail = () => {
   );
 };
 
-export default ProductDetail;
+export default ProductFullDetail;

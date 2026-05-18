@@ -25,7 +25,7 @@ export const getPerfumeById = async (id) => {
     const response = await axios.get(`${API_URL}/perfumes/${id}`);
     return response.data;
   } catch (error) {
-    console.error(`Error al obtener el perfume con ID ${id}:`, error);
+    // console.error(`Error al obtener el perfume con ID ${id}:`, error);
     return null;
   }
 };

@@ -62,3 +62,6 @@ decanto-aromas/
 |──index.html
 |── package-lock.json
 |── package.json
+
+
+google-site-verification=40BoAmHUm1Uws_xIsz_9aS3rkOOGSL6PaUnQwyctqUz

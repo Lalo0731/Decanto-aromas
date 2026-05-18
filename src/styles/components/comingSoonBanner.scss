@@ -1,134 +1,149 @@
-@use '../base' as *;
+.nicho {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  // border-radius: 12px;
 
-.banner {
-  &__coming {
-    position: relative;
-    margin: 2rem auto;
-    cursor: pointer;
-    width: 100%;
-    height: 500px;
+
+/* IMAGEN */
+  &__bg {
+    position: absolute;
+    inset: 0;
     overflow: hidden;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
 
-    &:hover img {
-        transform: scale(1.05) rotate(-1deg);
+      transition: transform 0.5s ease;
     }
   }
+  &:hover img{
+    transform: scale(1.08) rotate(-1deg);
+  }
 
-  &__soon {
+  &__overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+  
+    display: grid;
+    align-items: center;
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  
+    padding: 0 2rem;
+  
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    padding-left: 8rem;
-    text-align: left;
-    color: $color-blanco;
-    font-size: 1.5rem;
-    font-weight: $font-bold;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-    opacity: 1;
-    transition: none;
-
-    h2 {
-      font-family: $font-title;
-    }
   }
-  &__title{
+
+  &__title {
     font-size: 3rem;
-    font-weight: $font-bold;
     margin: 0;
-    font-family: $font-title;
-    color: $color-blanco;
+    color: white;
   }
 
-  &__subtitle{
+  &__subtitle {
     font-size: 1.5rem;
-    margin-top: 2rem;
-    font-family: $font-subtitle;
-    color: $color-blanco;
+    margin-top: 1rem;
+    color: white;
+    max-width: 500px;
+  }
+}
+
+/* OVERLAY */
+// .nicho__overlay {
+//   position: absolute;
+//   inset: 0;
+//   background: rgba(0,0,0,0.35);
+
+//   display: grid;
+//   align-items: center;
+// }
+
+/* CONTENIDO REAL */
+// .nicho__content {
+//   width: 100%;
+//   max-width: 1200px;
+//   margin: 0 auto;
+
+//   padding: 0 2rem;
+
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+// }
+
+/* TEXTO */
+// .nicho__title {
+//   font-size: 3rem;
+//   margin: 0;
+//   color: white;
+// }
+
+// .nicho__subtitle {
+//   font-size: 1.5rem;
+//   margin-top: 1rem;
+//   color: white;
+//   max-width: 500px;
+// }
+
+@media (max-width: 1024px) {
+  .nicho {
+    height: 400px;
   }
 
-  @media (max-width: 1024px) {
-    &__coming {
-      height: 400px;
-    }
-    &__soon {
-      padding-left: 4rem;
-    }
-    &__title {
-      font-size: 2.4rem;
-    }
-    &__subtitle {
-      font-size: 1.2rem;
-    }
+  .nicho__title {
+    font-size: 2.2rem;
   }
 
-  /* Pantallas medianas (hasta 768px) */
-  @media (max-width: 768px) {
-    &__coming {
-      height: 350px;
-    }
-    &__soon {
-      padding-left: 2rem;
-      align-items: flex-start;
-    }
-    &__title {
-      font-size: 2rem;
-    }
-    &__subtitle {
-      font-size: 1rem;
-      margin-top: 1rem;
-    }
+  .nicho__subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nicho {
+    height: 300px;
   }
 
-  /* Celulares pequeños (hasta 480px) */
-  @media (max-width: 480px) {
-    &__coming {
-      height: 250px;
-    }
-    &__soon {
-      padding: 0 1.5rem;
-      justify-content: center;
-      align-items: flex-start;
-      text-align: left;
-    }
-    &__title {
-      font-size: 1.5rem;
-      line-height: 1.2;
-    }
-    &__subtitle {
-      font-size: 0.9rem;
-      margin-top: 0.5rem;
-      max-width: 100%;
-    }
+  .nicho__content {
+    padding: 0 1.5rem;
   }
 
-  /* Celulares muy pequeños (hasta 360px o menos) */
-  @media (max-width: 360px) {
-    &__coming {
-      height: 220px;
-    }
-    &__title {
-      font-size: 1.3rem;
-    }
-    &__subtitle {
-      font-size: 0.8rem;
-    }
+  .nicho__title {
+    font-size: 1.8rem;
+  }
+
+  .nicho__subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nicho {
+    height: 250px;
+  }
+
+  .nicho__content {
+    padding: 0 1rem;
+  }
+
+  .nicho__title {
+    font-size: 1.5rem;
+  }
+
+  .nicho__subtitle {
+    font-size: 0.9rem;
   }
 }
 

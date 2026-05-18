@@ -1,9 +1,11 @@
 import React from "react";
-import PerfumesGrid from "../components/PerfumesGrid";
+// import PerfumesGrid from "../components/PerfumesGrid";
+import PerfumesFull from "../components/PerfumesFull";
 
 const PerfumesDisenador = () => {
-  // return <PerfumesGrid title="Perfumes de Diseñador" filterFn={(p) => p.category === 'diseñador' && !p.isDecant && !p.isDecantOnly} />;
-  return <PerfumesGrid title="Perfumes de Diseñador" filterFn={(p) => p.category === 'disenador' && !p.isDecantOnly} />;
+  return <PerfumesFull title="Perfumes de Diseñador" filterFn={(p) => p.category === 'disenador' && !p.isDecantOnly} />;
+
+  // return <PerfumesGrid title="Perfumes de Diseñador" filterFn={(p) => p.category === 'disenador' && !p.isDecantOnly} />;
 }
 
 export default PerfumesDisenador;
