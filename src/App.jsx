@@ -16,10 +16,12 @@ import ProductDecantsDetail from './views/ProductDecantsDetail.jsx';
 import RequestPerfume from './components/RequestPerfume.jsx';
 
 import Cart from './views/Cart.jsx';
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <MainLayout>
         <Routes>
           <Route path="/" element={<Home />} />

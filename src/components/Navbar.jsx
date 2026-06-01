@@ -35,11 +35,11 @@ function Navbar() {
     setMenuOpen(false);
   };
 
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-      window.addEventListener("scroll", handleScroll);
-      return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => setScrolled(window.scrollY > 50);
+  //     window.addEventListener("scroll", handleScroll);
+  //     return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
@@ -69,7 +69,7 @@ function Navbar() {
             <li><Link to="/decants-nicho" onClick={() => setMenuOpen(false)}>Decants Nicho</Link></li>
             <li><Link to="/solicitar-perfume" onClick={() => setMenuOpen(false)}>¿No encuentras tu perfume?</Link></li>
             <li>
-              <Link to="/cart" className="cart-link">
+              <Link to="/cart" className="cart-link" onClick={() => setMenuOpen(false)}>
                 Mi carrito
                 {cartItems.length > 0 && (
                   <span className="cart-badge">
