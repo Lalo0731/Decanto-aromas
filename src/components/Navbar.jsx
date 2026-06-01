@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import '../styles/components/navbar.scss';
+import { useCart } from '../context/CartContext';
 
 import logo from '../images/logo.png';
 
@@ -9,6 +10,7 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const { cartItems } = useCart();
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -65,6 +67,17 @@ function Navbar() {
             <li><Link to="/decants-disenador" onClick={() => setMenuOpen(false)}>Decants Diseñador</Link></li>
             <li><Link to="/decants-arabes" onClick={() => setMenuOpen(false)}>Decants Árabe</Link></li>
             <li><Link to="/decants-nicho" onClick={() => setMenuOpen(false)}>Decants Nicho</Link></li>
+            <li><Link to="/solicitar-perfume" onClick={() => setMenuOpen(false)}>¿No encuentras tu perfume?</Link></li>
+            <li>
+              <Link to="/cart" className="cart-link">
+                Mi carrito
+                {cartItems.length > 0 && (
+                  <span className="cart-badge">
+                    {cartItems.length}
+                  </span>
+                )}
+              </Link>
+            </li>
             <li>
               <button
                 className="navbar__link navbar__button"
@@ -115,6 +128,16 @@ function Navbar() {
               </button>
             </li>
             <li><Link to="/solicitar-perfume">¿No encuentras tu perfume?</Link></li>
+            <li>
+              <Link to="/cart" className="cart-link">
+                Mi carrito
+                {cartItems.length > 0 && (
+                  <span className="cart-badge">
+                    {cartItems.length}
+                  </span>
+                )}
+              </Link>
+            </li>
           </>
         )}
       </ul>

@@ -7,6 +7,7 @@ import '../styles/components/products.scss';
 function PerfumesDecants({ title, filterFn, category, isNew }) {
   const navigate = useNavigate();
   const [products, setProducts] = useState([]);
+  const [search, setSearch] = useState('');
   // const products = perfumes.filter(filterFn);
 
   useEffect(() => {
@@ -17,6 +18,10 @@ function PerfumesDecants({ title, filterFn, category, isNew }) {
     fetchPerfumes();
   }, [category, isNew, filterFn]);
 
+  const filteredProducts = products.filter((product) => 
+    product.name.toLowerCase().includes(search.toLowerCase())
+  );
+
   const handleClick = (id) => {
     navigate(`/product-decants/${id}`);
   };
@@ -24,9 +29,18 @@ function PerfumesDecants({ title, filterFn, category, isNew }) {
   return (
     <section className="products">
       <h2>{title}</h2>
+      <div className="products__search">
+        <input type="text" placeholder='Buscar perfume...'
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        />
+      </div>
       <div className="products__grid">
-        {products.length > 0 ? (
-          products.map((product) => {
+        {/* {products.length > 0 ? ( */}
+        {filteredProducts.length > 0 ? (
+          // products.map((product) => {
+          filteredProducts.map((product) => {
+
             const mainImage =
               product.images?.[0]?.image_url
               ? `http://127.0.0.1:3000/uploads/perfumes/${product.images[0].image_url}`

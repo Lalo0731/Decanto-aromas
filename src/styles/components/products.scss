@@ -91,6 +91,26 @@
       margin-bottom: 0.4rem;
     }
   }
+  &__search{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+  &__search input{
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 18px;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    font-size: 1rem;
+    outline: none;
+    transition: all .3s ease;
+
+    &:focus{
+      border-color: #c79a5b;
+      box-shadow: 0 0 8px rgba(199, 154, 91, .3);
+    }
+  }
 }
 
 .image-container {

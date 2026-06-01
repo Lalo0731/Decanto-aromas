@@ -15,6 +15,8 @@ import ProductDecantsDetail from './views/ProductDecantsDetail.jsx';
 
 import RequestPerfume from './components/RequestPerfume.jsx';
 
+import Cart from './views/Cart.jsx';
+
 export default function App() {
   return (
     <Router>
@@ -31,6 +33,8 @@ export default function App() {
 
           <Route path="/product-full/:id" element={<ProductFullDetail />} />
           <Route path="/product-decants/:id" element={<ProductDecantsDetail />} />
+
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </MainLayout>
     </Router>

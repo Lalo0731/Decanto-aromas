@@ -172,47 +172,56 @@
     }
   }
 
-  .whatsapp-btn {
-    background-color: #25D366;
+  .cart-btn {
+    width: 100%;
+    margin-top: 1rem;
+  
+    background: linear-gradient(
+      135deg,
+      $color-dorado,
+      darken($color-dorado, 12%)
+    );
+  
     color: #fff;
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 0.9rem 1.5rem;
     border: none;
     border-radius: 10px;
+  
+    padding: 0.9rem 1.5rem;
+  
+    font-size: 1rem;
+    font-weight: $font-bold;
+  
     cursor: pointer;
-    transition: all 0.3s ease;
-    display: inline-flex;
+  
+    transition: all .3s ease;
+  
+    display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin-top: 1.5rem;
-    width: 100%;
-
+    gap: .6rem;
+  
     &::before {
-      content: "";
-      background-image: url("https://cdn-icons-png.flaticon.com/512/733/733585.png");
-      background-size: contain;
-      background-repeat: no-repeat;
-      width: 22px;
-      height: 22px;
+      // content: "🛒";
+      font-size: 1.1rem;
     }
-
+  
     &:hover {
-      background-color: darken(#25D366, 5%);
       transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+      box-shadow: 0 8px 20px rgba(0,0,0,.15);
     }
-
+  
+    &:active {
+      transform: translateY(0);
+    }
+  
     &:disabled {
-      background-color: #ccc;
+      background: #ccc;
       cursor: not-allowed;
       box-shadow: none;
     }
   }
 
-  .product-detail__decant,
-  .whatsapp-btn {
+  .product-detail__decant{
     animation: fadeIn 0.3s ease-in-out;
   }
 
@@ -252,10 +261,6 @@
   }
 }
   
-
-/* ================================
-   📱 RESPONSIVE DESIGN
-   ================================ */
 
 /* 🔹 Para tablets y móviles medianos */
 @media (max-width: 1024px) {
@@ -341,11 +346,11 @@
         font-size: 0.95rem;
       }
 
-      .whatsapp-btn {
-        width: 100%;
-        font-size: 0.95rem;
-        padding: 0.8rem 1.2rem;
-      }
+      // .whatsapp-btn {
+      //   width: 100%;
+      //   font-size: 0.95rem;
+      //   padding: 0.8rem 1.2rem;
+      // }
     }
 
     &__decant {
@@ -379,10 +384,10 @@
         font-size: 0.9rem;
       }
 
-      .whatsapp-btn {
-        font-size: 0.9rem;
-        padding: 0.7rem 1rem;
-      }
+      // .whatsapp-btn {
+      //   font-size: 0.9rem;
+      //   padding: 0.7rem 1rem;
+      // }
     }
 
     &__thumbnails img {
