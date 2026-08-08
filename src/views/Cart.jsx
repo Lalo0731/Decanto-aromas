@@ -3,7 +3,7 @@ import '../styles/components/cart.scss';
 import { useCart } from "../context/CartContext";
 
 export default function Cart(){
-    const { cartItems, removeFromCart } = useCart();
+    const { cartItems, removeFromCart, clearCart } = useCart();
     // console.log("cartItems",cartItems);
     const total = cartItems.reduce(
         (acc, item) =>
@@ -43,6 +43,8 @@ export default function Cart(){
           `https://wa.me/${phone}?text=${encodedMessage}`,
           "_blank"
         );
+        
+        clearCart();
     };
 
   return (

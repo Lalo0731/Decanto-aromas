@@ -137,14 +137,14 @@ const ProductDecantsDetail = () => {
           Agregar al carrito
         </button>
 
-        <div className="product-detail__decant">
+        {/* <div className="product-detail__decant">
             <p className="product-detail__decant-price">
               Precio por mililitro: <strong>${product.priceDecant}</strong>
             </p>
             <p className="product-detail__decant-note">
               *La venta de decants es a partir de 5ml.
             </p>
-          </div>
+        </div> */}
 
         {product.accords?.length > 0 && (
           <div className="accords">
