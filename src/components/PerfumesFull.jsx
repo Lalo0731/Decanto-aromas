@@ -77,7 +77,7 @@ function PerfumesFull({ title, filterFn, category, isNew }) {
             currentProducts.map((product) => {
             const mainImage =
               product.images?.[0]?.image_url
-              ? `http://127.0.0.1:3000/uploads/perfumes/${product.images[0].image_url}`
+              ? `${import.meta.env.VITE_UPLOADS_URL}/uploads/perfumes/${product.images[0].image_url}`
               : product.image || '';
               return(
                 <div

@@ -4,6 +4,7 @@ import { getPerfumeById } from '../services/perfumesService';
 import { showWarning } from '../utils/alerts';
 import '../styles/productDetail.scss';
 import { useCart } from '../context/CartContext';
+import { setProductSEO } from '../utils/seo';
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -36,8 +37,9 @@ const ProductDetail = () => {
       const data = await getPerfumeById(id);
       if (data) {
         setProduct(data);
+        setProductSEO(data);
         if (data.images && data.images.length > 0) {
-          setSelectedImage(`http://127.0.0.1:3000/uploads/perfumes/${data.images[0].image_url}`);
+          setSelectedImage(`${import.meta.env.VITE_UPLOADS_URL}/uploads/perfumes/${data.images[0].image_url}`);
         }
       }
       setLoading(false);
@@ -72,7 +74,7 @@ const ProductDetail = () => {
       <div className="product-detail__gallery">
         <div className="product-detail__thumbnails">
           {product.images?.map((img, index) => {
-            const imageUrl = `http://127.0.0.1:3000/uploads/perfumes/${img.image_url}`;
+            const imageUrl = `${import.meta.env.VITE_UPLOADS_URL}/uploads/perfumes/${img.image_url}`;
             return (
               <img
                 key={index}

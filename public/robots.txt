@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://decantoaromas.com.mx/sitemap.xml
